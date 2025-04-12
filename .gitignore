@@ -3,6 +3,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+cifar-10-batches-py/
+
+cifar-10-*
+
+# Ignore all files in the 'data' directory
+data/*
+
+# Ignore all files in the 'results' directory
+results/*
+
 # C extensions
 *.so
 
