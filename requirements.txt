@@ -1,0 +1,8 @@
+transformers
+torch
+datasets
+tqdm
+python-dotenv
+accelerate
+sentencepiece
+protobuf 
