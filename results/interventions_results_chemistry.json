@@ -1,0 +1,110 @@
+{
+    "ON": [
+        {
+            "topic_losses": {
+                "Inorganic Chemistry": 5.2309326769700695,
+                "Organic Chemistry": 5.787021308109678,
+                "Physical Chemistry": 4.535642568455186
+            },
+            "subtopic_losses": {
+                "Oxidation States": 5.2309326769700695,
+                "Alkenes": 5.995877891116672,
+                "Nomenclature": 5.563246397745042,
+                "Kinetics": 4.535642568455186
+            }
+        },
+        {
+            "topic_losses": {
+                "Inorganic Chemistry": 5.202829268441271,
+                "Organic Chemistry": 5.756752967834473,
+                "Physical Chemistry": 4.490657379460889
+            },
+            "subtopic_losses": {
+                "Oxidation States": 5.202829268441271,
+                "Alkenes": 5.963387976752387,
+                "Nomenclature": 5.535358315422421,
+                "Kinetics": 4.490657379460889
+            }
+        },
+        {
+            "topic_losses": {
+                "Inorganic Chemistry": 5.247637093956791,
+                "Organic Chemistry": 5.79934916002997,
+                "Physical Chemistry": 4.5467608085898465
+            },
+            "subtopic_losses": {
+                "Oxidation States": 5.247637093956791,
+                "Alkenes": 6.00380441877577,
+                "Nomenclature": 5.580289954230899,
+                "Kinetics": 4.5467608085898465
+            }
+        },
+        {
+            "topic_losses": {
+                "Inorganic Chemistry": 5.136533580609222,
+                "Organic Chemistry": 5.697744457201026,
+                "Physical Chemistry": 4.434875249862671
+            },
+            "subtopic_losses": {
+                "Oxidation States": 5.136533580609222,
+                "Alkenes": 5.90706255171034,
+                "Nomenclature": 5.47347507022676,
+                "Kinetics": 4.434875249862671
+            }
+        }
+    ],
+    "OFF": [
+        {
+            "topic_losses": {
+                "Inorganic Chemistry": 4.3396862941001775,
+                "Organic Chemistry": 4.841219082645987,
+                "Physical Chemistry": 3.6604949624039405
+            },
+            "subtopic_losses": {
+                "Oxidation States": 4.3396862941001775,
+                "Alkenes": 5.034695323308309,
+                "Nomenclature": 4.633923110507784,
+                "Kinetics": 3.6604949624039405
+            }
+        },
+        {
+            "topic_losses": {
+                "Inorganic Chemistry": 4.350291277045634,
+                "Organic Chemistry": 4.854019417159859,
+                "Physical Chemistry": 3.682583290477132
+            },
+            "subtopic_losses": {
+                "Oxidation States": 4.350291277045634,
+                "Alkenes": 5.046385060416328,
+                "Nomenclature": 4.647913370813642,
+                "Kinetics": 3.682583290477132
+            }
+        },
+        {
+            "topic_losses": {
+                "Inorganic Chemistry": 4.326246001827183,
+                "Organic Chemistry": 4.829450925191243,
+                "Physical Chemistry": 3.6538272597068966
+            },
+            "subtopic_losses": {
+                "Oxidation States": 4.326246001827183,
+                "Alkenes": 5.025513055589464,
+                "Nomenclature": 4.619384356907436,
+                "Kinetics": 3.6538272597068966
+            }
+        },
+        {
+            "topic_losses": {
+                "Inorganic Chemistry": 4.379129046824441,
+                "Organic Chemistry": 4.8762514810452515,
+                "Physical Chemistry": 3.6992800318917562
+            },
+            "subtopic_losses": {
+                "Oxidation States": 4.379129046824441,
+                "Alkenes": 5.067869091033936,
+                "Nomenclature": 4.670946898914519,
+                "Kinetics": 3.6992800318917562
+            }
+        }
+    ]
+}
