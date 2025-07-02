@@ -36,8 +36,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def setup():
     """Load environment variables and set device."""
     load_dotenv()
-    # hf_token = os.getenv("HF_TOKEN")
-    hf_token = "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"
+    hf_token = os.getenv("HF_TOKEN")
     if not hf_token:
         logging.warning("HF_TOKEN environment variable not found. Ensure you are logged in via huggingface-cli login or set the HF_TOKEN.")
     # Use HF_TOKEN if available (required for Gemma models)
@@ -186,7 +185,7 @@ def load_and_prepare_data(tokenizer, dataset_slice):
 def load_model_and_tokenizer():
     """Loads the model and tokenizer."""
     logging.info(f"Loading tokenizer: {MODEL_NAME}")
-    hf_token = "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"
+    hf_token = os.getenv("HF_TOKEN")
     # trust_remote_code=True might be needed for some models
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True, token = hf_token, device_map = "auto")
 
