@@ -176,7 +176,10 @@ def load_and_prepare_data(tokenizer, dataset_slice, dataset_name_arg, dataset_co
         # Also handle cases where 'TEXT' might be missing or not a string for robustness
         texts = []
         for item in data_hf:
-            text_content = item.get('TEXT') # Use 'TEXT' for XythicK/Chemistry
+            question_content = item.get('Question')
+            answer_content = item.get("Answer_1")
+            text_content = f"<start_of_turn>user\n{question_content}<end_of_turn>\n<start_of_turn>model\n{answer_content}<end_of_turn>"
+            # text_content = question_content + answer_content
             if isinstance(text_content, str):
                 texts.append(text_content)
             else:
@@ -210,8 +213,9 @@ def load_and_prepare_data(tokenizer, dataset_slice, dataset_name_arg, dataset_co
 def load_model_and_tokenizer():
     """Loads the model and tokenizer."""
     logging.info(f"Loading tokenizer: {MODEL_NAME}")
+    hf_token = os.getenv("HF_TOKEN")
     # trust_remote_code=True might be needed for some models
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True, token = hf_token)
 
     # Set pad token if missing
     if tokenizer.pad_token is None:
@@ -222,6 +226,7 @@ def load_model_and_tokenizer():
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         trust_remote_code=True,
+        token = hf_token
         # Use torch_dtype=torch.float16 or bfloat16 for memory efficiency if GPU supports it
         # torch_dtype=torch.bfloat16,
         # device_map="auto" # Can help distribute large models across GPUs/CPU
@@ -229,6 +234,8 @@ def load_model_and_tokenizer():
     # Ensure model's pad token id matches tokenizer's
     model.config.pad_token_id = tokenizer.pad_token_id
     return model, tokenizer
+
+
 
 # --- Custom Forward Function with MLoRA ---
 def model_forward_with_mlora(model, mlora_adapter, input_ids, attention_mask, labels=None):
